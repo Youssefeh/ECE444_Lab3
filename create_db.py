@@ -1,9 +1,9 @@
-# create_db.py
-from project.app import app, db
-from project.models import Post
+"""CREAT."""
 
+from project.app import app, db
 
 with app.app_context():
+    """APP."""
     # create the database and the db table
     db.create_all()
 
