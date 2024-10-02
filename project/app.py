@@ -40,6 +40,13 @@ app.config.from_object(__name__)
 # init sqlalchemy
 db = SQLAlchemy(app)
 
+
+@app.before_request
+def create_db_before_request():
+    """CREATE."""
+    db.create_all()
+
+
 from project import models
 
 
